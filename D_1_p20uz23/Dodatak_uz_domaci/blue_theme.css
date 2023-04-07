@@ -1,10 +1,8 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
-    /*ovde bih dodao 
-    backgorund-color: #00406E;
+    background-color: #073A4F;
     color: white;
-    */
 }
 ul {
     list-style: none;
@@ -13,18 +11,17 @@ ul {
     flex-direction: row;
     gap: 90px;
     font-size: 30px;
-    
 }
 ul a {
     text-decoration: none;
-    color: #104943;
-    /*ovde bih morao staviti color: white*/
+    /*color: #104943;*/
+    color: white;
 }
 ul a:hover {
     color: #0e8176;
 }
 .slika {
-    background-image: url(./coffee-bar.jpg);
+    background-image: url(../coffee-bar.jpg);
     height: 90vh;
 }
 .slika h1 {
@@ -32,8 +29,8 @@ ul a:hover {
     justify-content: center;
     padding-top: 350px;
     font-size: 50px;
-    color: black;
-    /*color se menja u white i u html file-u bih morao span da promenim u white, zato sto mi je jedna rec u ljubicasto*/
+    /*color: black;*/
+    color: white;
 }
 .onama {
     text-align: center;
@@ -52,7 +49,8 @@ form {
     align-items: center;
     flex-direction: column;
     padding-bottom: 70px;
-    background-color: #1a978b;
+    /*background-color: #1a978b;*/
+    background-color: #073A4F;
 }
 form h2 {
     font-size: 40px;
