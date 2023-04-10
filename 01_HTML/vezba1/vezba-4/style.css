@@ -1,0 +1,22 @@
+body {
+    background-color: aqua;
+    margin: 0;
+}
+h2 {
+    text-align: center;
+    color: black;
+}
+img {
+    border: 20px double blue;
+}
+.klasa {
+    color: green;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.klasa2 {
+    color: blueviolet;
+}
+.klasa2 span:hover{
+    color: green;
+}

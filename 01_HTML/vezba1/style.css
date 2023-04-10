@@ -1,0 +1,49 @@
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1{
+    color: blueviolet;
+}
+h2 {
+    color: red;
+}
+p {
+    color: yellowgreen;
+}
+img {
+    height: 300px;
+    width: 400px;
+    border: 2px dashed;
+}
+a{
+    color: blue;
+}
+/*nesto ne sljaka ovde*/
+a:visited{
+    color: green;
+}
+a:hover {
+    color: yellow;
+}
+
+.pcele {
+    text-align: center;
+    font-family: comic sans-serif;
+}
+.par2, .par3 {
+    text-align: right;
+    font-size: 24px;
+}
+.zivotinje {
+    text-align: center;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.vezba-4 h2 {
+    color: blue;
+    text-align: center;
+    background-color: aqua;
+}
