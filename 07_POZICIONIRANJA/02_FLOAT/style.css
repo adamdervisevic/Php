@@ -1,0 +1,13 @@
+div {
+    background-color: blueviolet;
+    overflow: hidden;
+}
+p {
+    background-color: skyblue;
+    float: right;
+    width: 220px;
+    height: 30px;
+}
+p:nth-child(2n){
+    float: left;
+}
