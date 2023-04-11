@@ -24,3 +24,6 @@ th {
 .druga tr:nth-child(3n) {
     color: blue;
 }
+.druga tr:nth-child(3n) a{
+    color: blue;
+}
