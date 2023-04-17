@@ -1,0 +1,80 @@
+@media only screen and (max-width: 1000px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .row {
+        width: 100%;
+        overflow: hidden;
+    }
+    [class*="col-s"]{
+        float: left;
+    }
+    [class*="col-s"] {
+        width: 100%;
+    }
+    header {
+        color: #006ad5;
+        text-align: center;
+        padding: 10px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #0275d8;
+        overflow: hidden;
+    }
+    nav ul li {
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+    nav ul li:hover {
+        background-color: #2390f0;
+    }
+    nav a {
+        text-decoration: none;
+        display: block;
+        color: white;
+        font-size: 1.1em;
+    }
+    nav .logo {
+        height: 49px;
+        width: 100%;
+        cursor: pointer;
+    }
+    main {
+        margin: 10px;
+    }
+    aside {
+        margin: 10px 0px 10px 10px;
+    }
+    aside ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    aside ul li {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #eee9e9;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    aside ul li:hover {
+        background-color: #cec5c5;
+    }
+    aside ul a {
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    h3 {
+        padding: 10px 5px;
+    }
+}
+/*desktop*/
+
+
+
