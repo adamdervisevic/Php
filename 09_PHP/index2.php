@@ -37,6 +37,47 @@
     echo "Vrednost u dolarima nakon konverzije: " . $dol;
     echo "<hr>";
 
+    /* Zadatak 7. */ 
+
+    $dol = 100;
+    $kursEurDin = 117.5;
+    $kursDolDin = 106.7;
+
+    $eur = $dol * $kursDolDin / $kursEurDin;
+    echo "<hr>";
+    echo "Vrednost u eura nakon konverzije: " . $eur;
+    echo "<hr>";
+
+    /* Zadatak 8. */ 
+
+    $cel = 20;
+    $farenhajt = $cel * 1.8 + 32;
+    echo "<hr>";
+    echo "Temperatura u Farenhajtima je: " . $farenhajt;
+    echo "<hr>";
+
+    /* obrnuto, iz Faranhajta u Celzijus */
+
+    $cel = ($farenhajt - 32) / 1.8;
+    echo "<hr>";
+    echo "Temperatura u Celzijusima je: " . $cel;
+    echo "<hr>";
+    
+    /* Zadatak 9. */ 
+
+    $cel = 20;
+    $kel = $cel + 273.15;
+    echo "<hr>";
+    echo "Temperatura u Kelvinima je: " . $kel;
+    echo "<hr>";
+
+    /* obrnuto iz kelvina u celz */
+
+    $cel = $kel - 273.15;
+    echo "<hr>";
+    echo "Temperatura u Celzijusima je: " . $cel;
+    echo "<hr>";
+
     /* Zadatak 10. */
 
     $cena = 70;
