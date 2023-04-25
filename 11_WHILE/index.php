@@ -14,89 +14,95 @@
         // b)Svaki u novom redu
 
         // a)
-        // $i = 1;
-        // while($i <= 20) {
-        //     echo "$i ";
-        //     $i++;
-        // }
+        $i = 1;
+        while($i <= 20) {
+            echo "$i ";
+            $i++;
+        }
         
-        // // b)
-        // // $i = 1;
-        // // while($i <= 20) {
-        // //     echo "$i <br/>";
-        // //     $i++;
-        // }
-        //echo "<i>$i</i>";
+        //b)
+        $i = 1;
+        while($i <= 20) {
+            echo "$i <br/>";
+            $i++;
+        }
+        echo "<i>$i</i>";
         //Vrednost $i nakon petlje je 21 
 
         //Ekvivalentni izrazi za povecavanje za jedan su:
-        // $i++;
-        // $i +=1;
-        //$i = $i + 1;
+        $i++;
+        $i +=1;
+        $i = $i + 1;
 
         //Ekvivalentni izrazi za smanjivanje za jedan su:
-        // $i--;
-        // $i -=1;
-        //$i = $i - 1;
+        $i--;
+        $i -=1;
+        $i = $i - 1;
 
     //2. Zadatak
     //Ispisati brojeve od 20 do 1. 
-        // $i = 20;
-        // while($i >= 1) {
-        //     echo "$i ";
-        //     $i --;
-        // }
-        // echo "<br>";
-        //echo "<i>$i</i>";
+        $i = 20;
+        while($i >= 1) {
+            echo "$i ";
+            $i --;
+        }
+        echo "<br>";
+        echo "<i>$i</i>";
         // $i ima vrednost 0 nakon izvrsenja ove while petlje
     // 3. Zadatak
     // Ispisati parne brojeve od 1 do 20. 
-        // $n = 1;
-        // while($n <= 20) {
-        //     if($n%2 == 0) {
-        //         echo "$n ";
-        //     }
-        //     $n++;
-        // }
+        $n = 1;
+        while($n <= 20) {
+            if($n%2 == 0) {
+                echo "$n ";
+            }
+            $n++;
+        }
         
 
     // 4. Zadatak
     // Kreirati n paragrafa sa proizvoljnim tekstom i naizmenično ih obojiti u tri različite boje
         // prvi nacin
-        // $n = 5;
-        // $i = 1;
-        // while($i <= $n) {
-        //     if($i%3 == 0) {
-        //         echo "<p style='color:red;'>Hello $i</p>";
-        //     } elseif($i%3 == 1) {
-        //         echo "<p style='color:blue;'>Hello $i</p>";
-        //     }else {
-        //         echo "<p style='color:orange;'>Hello $i</p>";
-        //     }
-        //     $i++;
-        // }
+        $n = 5;
+        $i = 1;
+        while($i <= $n) {
+            if($i%3 == 0) {
+                echo "<p style='color:red;'>Hello $i</p>";
+            } elseif($i%3 == 1) {
+                echo "<p style='color:blue;'>Hello $i</p>";
+            }else {
+                echo "<p style='color:orange;'>Hello $i</p>";
+            }
+            $i++;
+        }
         // //drugi nacin
-        // $n = 5;
-        // $i = 1;
-        // while($i <= $n) {
-        //     if($i%3 == 0) {
-        //         $boja = "purple";
-        //     } elseif($i%3 == 1) {
-        //         $boja = "lime";
-        //     }else {
-        //         $boja = "magenta";
-        //     }
-        //     echo "<p style='color:$boja;'>Hello $i</p>";
-        //     $i++;
-        // }
-        // treci nacin
+        $n = 5;
+        $i = 1;
+        while($i <= $n) {
+            if($i%3 == 0) {
+                $boja = "purple";
+            } elseif($i%3 == 1) {
+                $boja = "lime";
+            }else {
+                $boja = "magenta";
+            }
+            echo "<p style='color:$boja;'>Hello $i</p>";
+            $i++;
+        }
         
 
     // 5. Zadatak 
     //Uradi ga posle
-    
-
-
+    $i = 1;
+    $n = 4;
+    while($i <= $n) {
+        if($i % 2 ==0) {
+            echo "<img src='./slika.jpg' style='border: 2px solid green'>";
+        } else {
+            echo "<img src='./slika.jpg' style='border: 2px solid yellow'>";
+        }
+        $i++;
+    }
 
     // 6. Zadatak
     // Odrediti sumu brojeva od 1 do 100
@@ -108,6 +114,7 @@
     }
     echo "<p>Suma brojeva od 1 do 100 je: $suma</p>";
 
+    // 7. Zadatak
     $i = 1;
     $suma = 0;
     $n = 95;
@@ -117,6 +124,7 @@
     } 
     echo "<p>Suma brojeva od 1 do $n je: $suma</p>";
 
+    // 8. Zadatak
     $n = $pom = 20;
     $suma = 0;
     $m = 540;
@@ -138,8 +146,45 @@
     echo "<p>Prizvod brojeva od $n do $m je: $p</p>";
 
     // 10. Zadatak
-    $i = 0;
-    $n = 10;
+    $n = $i = 1;
     $m = 200;
+    $parni = 0;
+    $neparni = 0;
+    while ($i <= $m) {
+        if($i % 2 == 0) {
+            $parni = ($i**2) + $parni;
+        }else {
+            $neparni = ($i**3) + $neparni;
+        }
+        $i++;
+    }
+    echo "<p>Suma parnih je $parni suma neparnih je $neparni</p>";
 
+    // 11.Zadatak
+    $n = 0;
+    $k = 6;
+    $i = 1;
+    while($i <= $k) {
+        if($k % $i == 0) {
+            $n++;
+        }
+        $i++;
+    }
+    echo "<p>Broj $k je deljiv $n puta</p>";  
+    
+    // 12. Zadatak
+    $n = 29;
+    $i = 1;
+    $brojac = 0;
+    while($i <= $n) {
+        if($n % $i == 0) {
+            $brojac++;
+        }
+        $i++;
+    }
+    if($brojac > 2) {
+        echo "<p>Broj $n nije prost</p>";
+    } else {
+        echo "<p>Broj $n je prost</p>";
+    }
 ?>
