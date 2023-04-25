@@ -182,9 +182,54 @@
         }
         $i++;
     }
-    if($brojac > 2) {
-        echo "<p>Broj $n nije prost</p>";
-    } else {
+    if($brojac == 2) {
         echo "<p>Broj $n je prost</p>";
+    } else {
+        echo "<p>Broj $n nije prost</p>";
     }
+
+    //Drugi nacin
+    $k = 6;
+    $i = 2;
+    $prost = true;
+    while ($i < $k) {
+        if($k% $i == 0){
+            $prost = false;
+            break;
+        }
+        $i++;
+    }
+    if($prost) {
+        echo "<p>Broj $k jeste prost broj.</p>";
+    } else {
+        echo "<p>Broj $k nije prost broj.</p>";
+    }
+    //13. Zadatak
+    
+    $i = 20;
+    $pro = 1;
+    while($i >= 1) {
+        $pro = $pro * $i;
+        if($pro > 10000){
+            break;
+        }
+        $i--;
+    } 
+    echo "<p>Poslednji broj koji je ucestovao je: <span style='color:red;'>$i</span></p>";
+    echo "<p>Prozivod je: <span style='color:green;'>$pro</span></p>";
+
+    //14. Zadatak(uradi ovaj zadatak samostalno)
+    $n = 8;
+    $m = 132;
+    if($n < $m) {
+        $rez = $n;
+        while($rez <= $m) {
+            $rez *= $n;
+        }
+        echo $rez;
+    } else {
+        echo "<p>Greska</p>";
+    }
+    
+    
 ?>
