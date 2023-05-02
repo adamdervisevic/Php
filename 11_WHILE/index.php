@@ -218,18 +218,18 @@
     echo "<p>Poslednji broj koji je ucestovao je: <span style='color:red;'>$i</span></p>";
     echo "<p>Prozivod je: <span style='color:green;'>$pro</span></p>";
 
-    //14. Zadatak(uradi ovaj zadatak samostalno)
-    $n = 8;
-    $m = 132;
-    if($n < $m) {
-        $rez = $n;
-        while($rez <= $m) {
-            $rez *= $n;
+    //14. Zadatak
+    $b1 = 7;
+    $b2 = 90;
+    $br = 1;
+
+    if($b1 < $b2) {
+        $br = $b1;
+        while($br < $b2) {
+            $br = $br * $b1;
         }
-        echo $rez;
+        echo "$br";
     } else {
         echo "<p>Greska</p>";
-    }
-    
-    
+}
 ?>
