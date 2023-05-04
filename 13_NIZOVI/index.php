@@ -1,5 +1,4 @@
 <?php 
-
     $car1 = "BMW";
     $car2 = "Volvo";
     $car3 = "Toyota";
@@ -29,7 +28,7 @@
 
     echo "$prviElement, $drugiElement, $treciElement";
     echo "<p>Prvi element u nizu je: $cars[0]</p>";
-    echo "<p>Prvi element u nizu je: $cars[7]</p>"; // izbacice gresku zato sto ovo ne postoji
+    // echo "<p>Prvi element u nizu je: $cars[7]</p>"; // izbacice gresku zato sto ovo ne postoji
 
     echo "<hr>";
 
@@ -112,7 +111,7 @@
         }
     }
     echo "<p>Najevic element ovog niza je $maks</p>";
-
+    echo "<hr>";
     // 6. Zadatak
     $brojevi = [5, 14, -4, 0, 11, -7, 91];
 
@@ -125,5 +124,151 @@
             $indexMax = $i;
         }
     }
-    echo "<p>Najveci element ima vrednost $maks, a index njegovog prvog pojavljivanja je $indexMax</p>"
+    echo "<p>Najveci element ima vrednost $maks, a index njegovog prvog pojavljivanja je $indexMax</p>";
+    echo "<hr>";
+    // 7. Zadatak
+    /* NETACAN PRISTUP
+    $brojevi = [1, 2, 15];
+    
+    $zbir = 0;
+    $broj = 0;
+    for($i = 0; $i < count($brojevi); $i++) {
+        $zbir += $brojevi[$i];
+        $arsr = $zbir / count($brojevi);
+        if($brojevi[$i] > $arsr) {
+            $broj++;
+        }
+    }
+    echo "Broj brojeva vecih od srednje vrednosti niza je: $broj";
+    echo "<hr>";
+    */
+    $brojevi = [1, 2, 15];
+    $zbir = 0;
+    $broj = 0;
+    for($i = 0; $i < count($brojevi); $i++) {
+        $zbir += $brojevi[$i];
+    }
+    $arsr = $zbir / count($brojevi);
+    for($i = 0; $i < count($brojevi); $i++){
+        if($brojevi[$i] > $arsr) {
+            $broj++;
+        }
+    }
+    echo "Broj brojeva vecih od srednje vrednosti niza je: $broj";
+    echo "<hr>";
+
+    // 8. Zadatak
+    $brojevi = [1, 2, 15];
+    $zbir = 0;
+    for($i = 0; $i < count($brojevi); $i++) {
+        if($brojevi[$i] > 0) {
+            $zbir += $brojevi[$i];
+        }
+    }
+    echo "Zbir pozitivnih elemenata niza je: $zbir";
+    echo "<hr>";
+    // Bonus zadatak
+    //Izracunati srednju vrednost parnih elemenata celobrojnog niza
+    $brojevi = [10, 9, 15, 50];
+    $zbir = 0;
+    $broj = 0;
+    for($i = 0; $i < count($brojevi); $i++) {
+        if($brojevi[$i] % 2 == 0) {
+            $zbir += $brojevi[$i];
+            $broj++;
+        }
+    }
+    if($broj != 0){
+        $srvr = $zbir / $broj;
+    } else {
+        $srvr = 0;
+    }
+    echo "Srednja vrednost parnih elemenata u nizu jednaka je: $srvr";
+    echo "<hr>";
+
+    // 9. Zadatak
+    $parni = 0;
+    for($i = 0; $i < count($brojevi); $i++) {
+        if($brojevi[$i] % 2 == 0) {
+            $parni++;
+        }
+    }
+    echo "Broj parnih brojeva u nizu je: $parni";
+    echo "<hr>";
+
+    // 10. Zadatak
+    $brojevi = [4, 2, 38, 12];
+    $sum = 0;
+    for($i = 0; $i < count($brojevi); $i+=2){
+        $sum += $brojevi[$i];
+    }
+    echo "Suma elementa u nizu sa parnim indexom je: $sum";
+    echo "<hr>";
+
+    //11. Zadatak
+    for($i = 0; $i < count($brojevi); $i++) {
+        $brojevi[$i] *= -1;
+    }
+    var_dump($brojevi);
+
+    echo "<hr>";
+    //12. Zadatak
+    $brojevi = [4, 2, 38, 12, 43, 54];
+    for($i = 0; $i < count($brojevi); $i++) {
+        if($brojevi[$i] % 2 != 0 && $i % 2 == 0) {
+            $brojevi[$i] *= -1;
+        }
+    }
+    var_dump($brojevi);
+    echo "<hr>";
+    
+    //13. Zadatak
+    $brojac = 0;
+    for($i = 0; $i < count($brojevi); $i++) {
+        if($i % 2 != 0 && $brojevi[$i] % 2 == 0) {
+            $brojac++;
+        }
+    }
+    echo "$brojac";
+    echo "<hr>";
+    
+    //14. Zadatak
+    $imena = ["Stefan", "Aleksandar", "Adam", "Dunja", "Milijana"];
+
+    for($i = 0; $i < count($imena); $i++) {
+        $ime = $imena[$i];
+        $duzina = strlen($ime);
+        echo "<p>Duzina stringa $ime je $duzina</p>";
+    }
+    echo "<hr>";
+    //15. Zadatak
+    $stringMaxDuzine = $imena[0];
+    $maxDuzina = strlen($imena[0]);
+
+    for($i = 1; $i < count($imena); $i++){
+        if(strlen($imena[$i]) > $maxDuzina){
+            $maxDuzina = strlen($imena[$i]);
+            $stringMaxDuzine = $imena[$i];
+        }
+    }
+    echo "Element niza sa maksimalnom duzino je: $stringMaxDuzine";
+
+    //16. Zadatak
+    echo "<hr>";
+    //17. Zadatak
+    $imena = ["Uros", "Djorjde", "Stefan", "Beti"];
+    $brojSadrziA = 0;
+    for($i = 0; $i < count($imena); $i++) {
+        if(strpos($imena[$i], "a") !== false) {
+            $brojSadrziA++;
+        }
+    }
+    echo "Broj stringova koji sadrze slovo 'a' je $brojSadrziA";
+
+    //18. Zadatak
+
+
+
+
+
 ?>
