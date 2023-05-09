@@ -266,6 +266,7 @@
     echo "Broj stringova koji sadrze slovo 'a' je $brojSadrziA";
 
     //18. Zadatak
+    // uradi do 22. kuci
 
 
 
