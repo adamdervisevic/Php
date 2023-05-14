@@ -14,7 +14,7 @@
     echo "<hr>";
 
     echo "$car1";
-    echo "$cars";
+    // echo "$cars";
 
     echo "<hr>";
 
@@ -241,6 +241,7 @@
         echo "<p>Duzina stringa $ime je $duzina</p>";
     }
     echo "<hr>";
+
     //15. Zadatak
     $stringMaxDuzine = $imena[0];
     $maxDuzina = strlen($imena[0]);
@@ -251,22 +252,99 @@
             $stringMaxDuzine = $imena[$i];
         }
     }
-    echo "Element niza sa maksimalnom duzino je: $stringMaxDuzine";
+    echo "Element niza sa maksimalnom duzinom je: $stringMaxDuzine";
+    echo "<hr>";
 
     //16. Zadatak
+    $zbir = 0;
+    $prosek = 0;
+    $broj_elemenata = 0;
+    $imena = ["Stefan", "Aleksandar", "Adam", "Dunja", "Milijana"];
+    for($i = 0; $i < count($imena); $i++) {
+        $zbir = $zbir + strlen($imena[$i]);
+    }
+    $prosek = $zbir / count($imena);
+    for($i = 0; $i < count($imena); $i++){
+        if(strlen($imena[$i]) > $prosek) {
+            $broj_elemenata++;
+        }
+    }
+    echo "Broj elemenata u nizu cija duzina je veca od prosecne je $broj_elemenata";
     echo "<hr>";
+
     //17. Zadatak
-    $imena = ["Uros", "Djorjde", "Stefan", "Beti"];
+    $imena = ["Uros", "Djorjde", "Stefan", "Beti, Adam, Marko"];
     $brojSadrziA = 0;
     for($i = 0; $i < count($imena); $i++) {
-        if(strpos($imena[$i], "a") !== false) {
+        if(stripos($imena[$i], "a") !== false) {
             $brojSadrziA++;
         }
     }
-    echo "Broj stringova koji sadrze slovo 'a' je $brojSadrziA";
+    echo "Broj stringova koji sadrze slovo 'a' je $brojSadrziA.";
+    echo "<hr>";
 
     //18. Zadatak
-    // uradi do 22. kuci
+    $imena = ["Uros", "Djorjde", "Stefan", "Beti", "Adam", "Marko"];
+    $brojPocinjeA = 0;
+    for ($i = 0; $i < count($imena); $i++)
+    {
+        if(strtolower($imena[$i][0]) == 'a')
+        {
+            $brojPocinjeA++;
+        }
+    }
+    echo "<p>Broj stringova koji pocinju na slovo 'a' je $brojPocinjeA</p>";
+    echo "<hr>";
+
+    //19. Zadatak
+    $a = array(3, 10, 5, -9, 4, -33, 44, 0);
+    $b = array();
+
+    for($i = 0; $i < count($a); $i++) {
+        if($a[$i] > 0) {
+            $b[] = $a[$i];
+        }
+    }
+    var_dump($b);
+    //20. Zadatak
+    $a = array(3, -9, 4, 6);
+    $b = array(4, 5, -19, 55);
+    $c = array();
+
+    for($i = 0; $i < count($a); $i++) {
+        $c[] = $a[$i];
+        $c[] = $b[$i];
+    }
+    var_dump($c);
+    echo "<hr>";
+
+    //21. Zadatak
+    $a = array(3, -9, 4, 6);
+    $b = array(4, 5, -19, 55);
+    $c = array();
+
+    for($i = 0; $i < count($a); $i++){
+        $c[] = $a[$i] * $b[$i];
+    }
+    var_dump($c);
+    echo "<hr>";
+
+    //22. Zadatak
+    $a = array(3, -9, 4, 6);
+    $b = array();
+
+    $n = count($a) / 2;
+    sort($a);
+    $b = array();
+    for ($i = 0; $i < $n; $i++) {
+        $b[$i] = ($a[$i] + $a[2*$n-1-$i]) / 2;
+    }
+    var_dump($b);
+
+
+
+
+
 
 
 
