@@ -54,39 +54,85 @@
             echo "<p>Automobil $marka je proizvedem posle 2000. godine</p>";
         }
     }
-
+    //2. Zadatak
     echo "<hr>";
-    // Zadatak 2
-
-    $osobe = array(
-        "Marko" => 175,
-        "Dusan" => 178,
-        "Nemanja" => 182,
-        "Vlada" => 150,
-        "Milos" => 168
+    $imena = array(
+        "Adam" => 176,
+        "Sasa" => 177,
+        "Filip" => 179,
+        "Milan" => 190,
+        "Veljko" => 165
     );
-    //Ispisati sve osobe sa njihovim visinama.
-    foreach($osobe as $ime => $visina) {
-        echo "<p>$ime je visok $visina cm.</p>";
+
+    foreach($imena as $ime => $visina) {
+        echo "<p>$ime je visok/a $visina.</p>";
     }
-    //Ispisati sve natprosečno visoke osobe.
+    echo "<hr>";
+
     $zbir = 0;
-    foreach($osobe as $visina) {
+    foreach($imena as $visina) {
         $zbir += $visina;
     }
-    $prosek = $zbir / count($osobe);
-    echo "<p>Prosecna visina je $prosek</p>";
-    //Ispisati sve osobe koje imaju maksimalnu visinu.
-    
-    
-    
+    $prosek = $zbir / count($imena);
+    foreach($imena as $ime => $visina) {
+        if($visina > $prosek) {
+            echo "<p>Osoba $ime je natprosecno visoka.</p>";
+        }
+    }
+    echo "<hr>";
 
+    $max_visina = 0;
+    $max_ime = '';
+    foreach($imena as $ime => $visina) {
+        if($visina > $max_visina) {
+            $max_visina = $visina;
+            $max_ime = $ime;
+        }
+    }
+    echo "<p>Osoba $max_ime ima maksimalnu visinu.</p>";
+    echo "<hr>";
 
-
-    // Ispisati sve osobe sa visinom ispod proseka, a čije ime počinje na slovo 'V'.
-    foreach($osobe as $ime => $visina) {
-        if($prosek > $visina && strpos($ime[0], "V") !== false) {
-            echo "<p>Osoba $ime je ispod proseka i pocetno slovo imena je 'V'</p>";
+    foreach($imena as $ime => $visina) {
+        if($visina < $prosek && $ime[0] == "V") {
+            echo "<p>Osoba $ime je visoka ispod proseka.</p>";
+        }
+    }
+    echo "<hr>";
+    
+    //3. Zadatak
+    $student = array(
+        "Geografija" => 5,
+        "Istorija" => 5,
+        "Matematika" => 3,
+        "Hemija" => 2,
+        "Fizicko" => 5,
+        "Muzicko" => 4
+    );
+    foreach($student as $predmet => $ocena) {
+        echo "<p>Ocena iz predmeta $predmet je: $ocena.</p>";
+    }
+    echo "<hr>";
+    $najveca_ocena = 0;
+    foreach($student as $predmet => $ocena) {
+        if($najveca_ocena < $ocena) {
+            $najveca_ocena = $ocena;
+        }
+    }
+    foreach($student as $predmet => $ocena) {
+        if($ocena == $najveca_ocena) {
+            echo "<p>Student ima $najveca_ocena iz $predmet.</p>";
+        }
+    }
+    echo "<hr>";
+    
+    $zbir = 0;
+    foreach($student as $ocena) {
+        $zbir += $ocena;
+    }
+    $prosecna_ocena = $zbir / count($student);
+    foreach($student as $predmet => $ocena) {
+        if($prosecna_ocena < $ocena) {
+            echo "<p>Student ima vecu ocenu od proseka iz $predmet.</p>";
         }
     }
 
