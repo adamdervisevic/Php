@@ -40,12 +40,10 @@
     
     // Zadatak 1
     function neparan($broj){
-        echo "<p>Pocetak f-je</p>";
         $rez = true;
         if($broj % 2 == 0) {
             $rez = false;
         }
-        echo "<p>Kraj f-je</p>";
         return $rez;
     }
 
@@ -91,7 +89,7 @@
     function slika($url){
         echo "<img src='$url'>";
     }
-    // slika("https://darko.topalski.com/wp-content/uploads/2021/02/Umetnicka-slika-Petao-30x40cm-Ulje-na-platnu-umetnik-Darko-TOPALSKI.jpg");
+    //slika("https://darko.topalski.com/wp-content/uploads/2021/02/Umetnicka-slika-Petao-30x40cm-Ulje-na-platnu-umetnik-Darko-TOPALSKI.jpg");
 
     echo "<hr>";
     //Zadatak 4
@@ -117,15 +115,19 @@
     //Napraviti funkciju recenica2 kojoj se prosleđuje veličina fonta a ona u paragrafu ispisuje proizvoljnu rečenicu. Pozvati funkciju pet puta za različite prosleđene vrednosti. Testirati funkciju.
 
     function recenica2($font) {
-        echo "<p style = 'font-size: $font;'>Neka recenica</p>";
+        echo "<p style = 'font-size:".$font."px'>Neka recenica</p>";
     }
     
-    recenica2(10);
-    recenica2(50);
-    recenica2(20);
-    recenica2(40);
-    recenica2(25);
-    
+    for($i = 1; $i <= 5; $i++) {
+        recenica2(rand(5, 30));
+    }
+    echo "<hr>";
+
+    // Zadatak 7
+    function aritmeticka($n, $m) {
+        return ($n + $m) / 2;
+    }
+    echo aritmeticka(10, 50);
 
     echo "<hr>";
     // Zadatak 8
@@ -145,39 +147,108 @@
         }
     }
     echo aritmetickaCifre(5, 35);
+    echo "<hr>";
 
+    // Zadatak 9 
+    function praksa($n, $a, $d){
+        $zarada = $a;
+        for($i = 2; $i <= $n; $i++) {
+            $zarada += $a + ($i - 1) * $d;
+        }
+        return $zarada;
+    }
+    $n = 6;
+    $a = 600;
+    $d = 100;
+    echo praksa($n, $a, $d);
+    echo "<hr>";
 
-    // Zadatak 10
-    $niz = array(2, 4, 5, 10);
-
+    //Zadatak 10
+    $niz = array(30, 6, 42, 5);
+    foreach($niz as $broj) {
+        if(neparan($broj)) {
+            echo $broj;
+        }
+    }
     // for($i = 0; $i < count($niz); $i++) {
     //     if(neparan($niz[$i])) {
     //         echo "<p>. $niz[$i] .</p>";
     //     }
     // }
-    // foreach ($niz as $v) {
-    //     if(neparan($v)) {
-    //         echo "<p>". $v . "</p>";
-    //     }
-    // }
+    echo "<hr>";
 
-    // //Zadatak 11
+    // Zadatak 11
+    $niz = array(30, 6, 42, 5);
+    function brojNeparnih($niz) {
+        $brojac = 0;
+        for($i = 0; $i < count($niz); $i++) {
+            if($niz[$i] % 2 !== 0) {
+                $brojac++;
+            }
+        }
+        return $brojac;
+    }
+    echo brojNeparnih($niz);
+    echo "<hr>";
 
-    // function brojNeparnih($niz){
-    //     $brojac = 0;
-    //     for($i = 0; $i < count($niz); $i++) {
-    //         if(neparan($niz[$i])) {
-    //             $brjac++;
-    //         } 
-    //     }
-    // }
-    // brojNeparnih($niz);
+    // Zadatak 12
+    $niz = array(
+        "01.01.2023" => 4,
+        "02.01.2023" => -7,
+        "03.01.2023" => 2,
+        "04.01.2023" => 10,
+        "05.01.2023" => 18,
+    );
 
+    function najniza($niz){
+        $min_temp = reset($niz);
+        $min_datum = key($niz);
 
+        foreach($niz as $datum => $temp) {
+            if($temp < $min_temp) {
+                $min_temp = $temp;
+                $min_datum = $datum;
+            }
+        } return "<p style='color: blue'>Minimalna temperatura u toku nedelje je bila $min_datum i iznosila je $min_temp</p>";
+    }
 
+    function najvisa($niz) {
+        $max_temp = reset($niz);
+        $max_datum = key($niz);
 
+        foreach($niz as $datum => $temp) {
+            if($temp > $max_temp) {
+                $max_temp = $temp;
+                $max_datum = $datum;
+            }
+        } return "<p style='color: red'>Maksimalna temperatura u toku nedelje je bila $max_datum i iznosila je $max_temp</p>";
+    }
+    $temperature = array(
+        "01.01.2023" => 4,
+        "02.01.2023" => -7,
+        "03.01.2023" => 2,
+        "04.01.2023" => 10,
+        "05.01.2023" => 18,
+    );
+    
+    echo najniza($temperature);
+    echo najvisa($temperature);
 
-
+    //Zadatak 13
+    function palindrom($recenice) {
+        foreach ($recenice as $recenica) {
+            $recenica_cista = strtolower(str_replace(['.', ',', ' ', '!', '?'], '', $recenica));
+            $obrnuto = strrev($recenica_cista);
+            if ($obrnuto == $recenica_cista) {
+                echo "<p>Ova recenica \"$recenica\" je palindrom</p>";
+            } else {
+                echo "<p>Ova recenica \"$recenica\" nije palindrom</p>";
+            }
+        }
+    }
+    
+    $palindrom = array("Ana voli Milovana.", "Dobar dan.", "Neka recenica.");
+    palindrom($palindrom);
 
 
 ?>
