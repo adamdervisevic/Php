@@ -132,4 +132,6 @@
 
     $mo = najmanjeOcena($filmovi);
     echo "<p>Najmanja ocena koju je neki film dobio je: $mo</p>";
+
+    
 ?>
