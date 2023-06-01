@@ -59,3 +59,15 @@ ALTER TABLE `tasks` ADD priority TINYINT NOT NULL;
 
 --Brisanje tabele
 DROP TABLE studenti;
+
+--Dodavanje novih redova u tabelu
+INSERT INTO customers
+VALUES (1, "Ana", 25, "Bubanjskih heroja 48", 600, 1, "Srbija", 37)
+
+INSERT INTO customers(name, id, age, active, state, number_of_visits)
+VALUES 
+("Bojana", 2, 39, 0, "Srbija", 16),
+("Dejan", 3, 31, 0, "Crna Gora", 3);
+
+INSERT INTO customers
+VALUES (4, "Ana", 25, "Bubanjskih heroja 48", 600, 1, "Srbija", 37)
