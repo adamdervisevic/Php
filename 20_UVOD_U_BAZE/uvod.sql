@@ -56,3 +56,6 @@ ALTER TABLE `customers` ADD active BOOLEAN;
 ALTER TABLE `customers` ADD state VARCHAR(90);
 ALTER TABLE `customers` ADD number_of_visits TINYINT;
 ALTER TABLE `tasks` ADD priority TINYINT NOT NULL;
+
+--Brisanje tabele
+DROP TABLE studenti;
