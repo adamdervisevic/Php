@@ -11,6 +11,15 @@ class Trougao
         return ($a > 0 && $b > 0 && $c > 0 && $a + $b > $c && $b + $c > $a 
         && $a + $c > $b);
     }
+    public function getA(){
+        return $this->a;
+    }
+    public function getB(){
+        return $this->b;
+    }
+    public function getc(){
+        return $this->c;
+    }
 
     public function setA($a)
     {
@@ -62,6 +71,15 @@ class Trougao
             $this->b = 0;
             $this->c = 0;
         }
+    }
+
+    public function obimTrougla() {
+        return $this->a + $this->b + $this->c;
+    }
+
+    public function povrsinaTrougla() {
+        $s = $this->obimTrougla() / 2;
+        return sqrt($s * ($s - $this->a) * ($s - $this->b) * ($s - $this->c));
     }
 }
 
