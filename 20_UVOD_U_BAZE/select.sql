@@ -238,3 +238,4 @@ SELECT `name`
 FROM `customers`
 WHERE `salary` > (SELECT AVG(`salary`) FROM `customers` WHERE `state` = 'Srbija')
 AND `state` = 'Srbija';
+
