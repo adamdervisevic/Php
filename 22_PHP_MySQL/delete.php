@@ -4,7 +4,7 @@ require_once 'connection.php';
 ?>
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,13 +25,13 @@ require_once 'connection.php';
                         <h4>Student: brisanje</h4>
                     </div>
                     <div class="card-body">
-                
+                   
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+       
     </div>
     
 </body>
