@@ -1,7 +1,7 @@
 <?php
     $host = "localhost";
-    $user = "admin";
-    $pass = "admin123";
+    $user = "adam";
+    $pass = "adam123";
     $db = "itbootcamp";
 
     /*

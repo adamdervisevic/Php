@@ -27,9 +27,10 @@ $upiti[] = [
 
 $upiti[] = [
     'id' => 2,
-    'upit' => "INSERT INTO `studenti` VALUES (null, 'Elizabeta', 'Markus', 'elizabeta.markus@gmail.com','0649191125')",
+    'upit' => "INSERT INTO `studenti` VALUES (null, 'Adam', 'Dervisevic', 'adamdervisevic@gmail.com','0616449864')",
     'opis' => 'Insert u tabelu studenti'
 ];
+
 
 $upiti[] = [
     'id' => 3,
@@ -39,7 +40,7 @@ $upiti[] = [
 
 $upiti[] = [
     'id' => 4,
-    'upit' => "INSERT INTO `studenti` VALUES (null, 'Igor', 'Mitrinovic', null, null)",
+    'upit' => "INSERT INTO `studenti` VALUES (null, 'Elizabeta', 'Mitrinovic', null, null)",
     'opis' => 'Insert u tabelu studenti'
 ];
 
@@ -48,10 +49,10 @@ $izvrseni = $conn->query("SELECT id FROM `db_update`;");
 $arr = $izvrseni->fetch_all(MYSQLI_ASSOC); //ovaj niz izgleda [['id'=>1], ['id'=>2], ['id'=>3], ...] a nama treba [1, 2, 3, ...]
 $ids = [];
 foreach ($arr as $value) {
-    $ids[]=$value['id'];
+    $ids[] = $value['id'];
 }
 
-if(count($upiti)==count($ids)){
+if(count($upiti) == count($ids)){
     echo "SVI UPITI SU VEC IZVRSENI";
 }
 else{
@@ -74,3 +75,5 @@ else{
         }
     }
 }
+
+?>
