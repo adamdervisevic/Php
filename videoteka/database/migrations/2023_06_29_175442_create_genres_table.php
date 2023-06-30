@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('genres', function (Blueprint $table) {
+           // $table->integer('id')->unsigned()->primary()->autoInceremet(); // moze i ovako
             $table->id();
-            $table->string('name_en')->nullable(false)->unique();
-            $table->string('name_sr')->nullable(true)->unique();
+            $table->string('name_en', 255)->nullable(false)->unique(); // ime broj duzine 255
+            $table->string('name_sr', 255)->nullable(true)->unique(); // ime na srpskom
             $table->timestamps();
         });
     }

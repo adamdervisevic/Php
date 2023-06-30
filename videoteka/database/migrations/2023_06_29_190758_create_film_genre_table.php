@@ -12,16 +12,22 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('film_genre', function (Blueprint $table) {
+           /* $table->film_id()->nullable(true);
+            $table->genre_id()->nullable(true);
+
+
+            $table->primary(['film_id', 'genre_id'], 'film_genre_pk');
+
+            $table->foreign('film_id','film_genre_film_fk')->references('id')->on('films')
+            ->onUpdate('cascade')->onDelete('no action');*/
+
             $table->unsignedBigInteger('film_id')->nullable(true);
             $table->unsignedBigInteger('genre_id')->nullable(true);
 
             $table->primary(['film_id', 'genre_id'], 'film_genre_pk');
 
-            $table->foreign('film_id', 'film_genre_film_fk')->references('id')->on('films')
-                ->onUpdate('cascade')->onDelete('cascade');
-
-            $table->foreign('genre_id', 'film_genre_genre_fk')->references('id')->on('genres')
-                ->onUpdate('cascade')->onDelete('no action');
+            $table->foreign('film_id', 'film_genre_film_fk')->references('id')->on('films')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('genre_id', 'film_genre_genre_fk')->references('id')->on('genres')->onUpdate('cascade')->onDelete('no action');
 
         });
     }
