@@ -13,13 +13,8 @@ return new class extends Migration
     {
         Schema::create('genres', function (Blueprint $table) {
             $table->id();
-<<<<<<<< HEAD:videoteka/database/migrations/2023_06_29_175423_create_genres_table.php
             $table->string('name_en', 255)->nullable(false)->unique();
             $table->string('name_sr', 255)->nullable(true)->unique();
-========
-            $table->string('name_en')->nullable(false)->unique();
-            $table->string('name_sr')->nullable(true)->unique();
->>>>>>>> parent of 6c5980b (push):videoteka/database/migrations/2023_06_29_175431_create_genres_table.php
             $table->timestamps();
         });
     }
