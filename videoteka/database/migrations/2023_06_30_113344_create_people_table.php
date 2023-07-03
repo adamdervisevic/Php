@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable(false);
             $table->string('surname')->nullable(false);
-            $table->date('b_date')->nullable(false);
+            $table->date('b_date')->nullable(true);     
             $table->timestamps();
         });
     }

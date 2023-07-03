@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable(false);
-            $table->smallInteger('year',false,true)->nullable(false);
-            $table->smallInteger('runing_h',false,true)->nullable(true);
-            $table->smallInteger('runing_m',false,true)->nullable(true);
-            $table->decimal('rating',3,1, true)->nullable(true);
-            $table->string('image',255)->nullable(true);
+            $table->smallInteger('year', false, true)->nullable(false);
+            // $table->unsignedSmallInteger('year'); ovo je isto kao i prethodni red
+            $table->smallInteger('running_h', false, true)->nullable(true);
+            $table->smallInteger('running_m', false, true)->nullable(true);
+            $table->decimal('rating', 3, 1, true)->nullable(true);
             $table->timestamps();
         });
     }
