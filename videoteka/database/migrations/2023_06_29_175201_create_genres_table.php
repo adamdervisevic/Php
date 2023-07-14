@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('genres', function (Blueprint $table) {
+            //$table->integer('id')->unsigned()->primary()->autoIncrement();
             $table->id();
             $table->string('name_en', 255)->nullable(false)->unique();
             $table->string('name_sr', 255)->nullable(true)->unique();

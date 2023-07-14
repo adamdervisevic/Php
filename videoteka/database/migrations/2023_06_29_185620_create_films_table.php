@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable(false);
             $table->smallInteger('year', false, true)->nullable(false);
-            // $table->unsignedSmallInteger('year'); ovo je isto kao i prethodni red
             $table->smallInteger('running_h', false, true)->nullable(true);
             $table->smallInteger('running_m', false, true)->nullable(true);
-            $table->decimal('rating', 3, 1, true)->nullable(true);
+            $table->decimal('rating', 3, 1, true)->nullable(true);      
+            /*$table->unsignedSmallInteger('year');
+            $table->smallInteger('year')->unsigned();*/
             $table->timestamps();
         });
     }

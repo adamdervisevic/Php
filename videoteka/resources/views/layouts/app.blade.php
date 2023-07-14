@@ -15,6 +15,9 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -59,6 +62,10 @@
                                 </a>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('film.index') }}">{{ __('Films') }}</a>
+                        </li>
+
                     </ul>
                     @endauth
 
@@ -111,8 +118,10 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
-                    @yield('content')
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                @yield('content')
             </div>
         </div>
         </main>
